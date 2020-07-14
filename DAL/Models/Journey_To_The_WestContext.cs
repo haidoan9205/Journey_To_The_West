@@ -129,6 +129,10 @@ namespace DAL.Models
                     .HasMaxLength(10)
                     .IsFixedLength();
 
+                entity.Property(e => e.Image)
+                    .HasColumnName("image")
+                    .IsUnicode(false);
+
                 entity.Property(e => e.IsActive).HasColumnName("isActive");
 
                 entity.Property(e => e.Quantity).HasColumnName("quantity");

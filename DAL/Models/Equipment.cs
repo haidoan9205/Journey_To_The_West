@@ -16,6 +16,7 @@ namespace DAL.Models
         public string Description { get; set; }
         public int? Quantity { get; set; }
         public bool? IsActive { get; set; }
+        public string Image { get; set; }
 
         public virtual ICollection<EquipmentList> EquipmentList { get; set; }
         public virtual ICollection<History> History { get; set; }

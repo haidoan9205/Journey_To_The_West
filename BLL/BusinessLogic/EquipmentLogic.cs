@@ -27,6 +27,7 @@ namespace BLL.BusinessLogic
                     EquipmentName = equipment.EquipmentName,
                     Description = equipment.Description,
                     Quantity = equipment.Quantity,
+                    Image = equipment.Image,
                     IsActive = true,
                 };
                 _unitOfWork.GetRepository<Equipment>().Insert(equipmentModel);
