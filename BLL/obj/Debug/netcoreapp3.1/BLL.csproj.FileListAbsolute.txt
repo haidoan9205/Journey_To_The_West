@@ -1,0 +1,12 @@
+D:\JourneyToTheWest\BLL\bin\Debug\netcoreapp3.1\BLL.deps.json
+D:\JourneyToTheWest\BLL\bin\Debug\netcoreapp3.1\BLL.dll
+D:\JourneyToTheWest\BLL\bin\Debug\netcoreapp3.1\BLL.pdb
+D:\JourneyToTheWest\BLL\obj\Debug\netcoreapp3.1\BLL.csprojAssemblyReference.cache
+D:\JourneyToTheWest\BLL\obj\Debug\netcoreapp3.1\BLL.AssemblyInfoInputs.cache
+D:\JourneyToTheWest\BLL\obj\Debug\netcoreapp3.1\BLL.AssemblyInfo.cs
+D:\JourneyToTheWest\BLL\obj\Debug\netcoreapp3.1\BLL.csproj.CoreCompileInputs.cache
+D:\JourneyToTheWest\BLL\obj\Debug\netcoreapp3.1\BLL.dll
+D:\JourneyToTheWest\BLL\obj\Debug\netcoreapp3.1\BLL.pdb
+D:\JourneyToTheWest\BLL\bin\Debug\netcoreapp3.1\DAL.dll
+D:\JourneyToTheWest\BLL\bin\Debug\netcoreapp3.1\DAL.pdb
+D:\JourneyToTheWest\BLL\obj\Debug\netcoreapp3.1\BLL.csproj.CopyComplete

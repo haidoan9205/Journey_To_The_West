@@ -1,0 +1,12 @@
+D:\JourneyToTheWest\DAL\bin\Debug\netcoreapp3.1\DAL.deps.json
+D:\JourneyToTheWest\DAL\bin\Debug\netcoreapp3.1\DAL.dll
+D:\JourneyToTheWest\DAL\obj\Debug\netcoreapp3.1\DAL.csprojAssemblyReference.cache
+D:\JourneyToTheWest\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfoInputs.cache
+D:\JourneyToTheWest\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfo.cs
+D:\JourneyToTheWest\DAL\bin\Debug\netcoreapp3.1\DAL.runtimeconfig.json
+D:\JourneyToTheWest\DAL\bin\Debug\netcoreapp3.1\DAL.runtimeconfig.dev.json
+D:\JourneyToTheWest\DAL\bin\Debug\netcoreapp3.1\DAL.pdb
+D:\JourneyToTheWest\DAL\obj\Debug\netcoreapp3.1\DAL.dll
+D:\JourneyToTheWest\DAL\obj\Debug\netcoreapp3.1\DAL.pdb
+D:\JourneyToTheWest\DAL\obj\Debug\netcoreapp3.1\DAL.genruntimeconfig.cache
+D:\JourneyToTheWest\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.CoreCompileInputs.cache
