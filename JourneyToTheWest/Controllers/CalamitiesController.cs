@@ -57,7 +57,7 @@ namespace JourneyToTheWest.Controllers
             {
                 return BadRequest("Cannot create a calamity");
             }
-            return Ok("Success");
+            return Ok(calamity);
         }
 
         [HttpDelete("{id}")]

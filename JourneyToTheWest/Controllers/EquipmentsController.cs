@@ -59,7 +59,7 @@ namespace JourneyToTheWest.Controllers
             {
                 return BadRequest("Cannot create an equipment");
             }
-            return Ok();
+            return Ok(equipment);
         }
 
         [HttpDelete("{id}")]
