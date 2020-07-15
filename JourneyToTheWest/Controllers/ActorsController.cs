@@ -27,7 +27,7 @@ namespace JourneyToTheWest.Controllers
             {
                 return NotFound("Actor is not found");
             }
-            return Ok(actor);
+            return Ok();
         }
 
         [HttpGet]
@@ -42,7 +42,7 @@ namespace JourneyToTheWest.Controllers
             {
                 return NotFound();
             }
-            return Ok(actor);
+            return Ok();
         }
 
         [HttpPost]
@@ -57,7 +57,7 @@ namespace JourneyToTheWest.Controllers
             {
                 return BadRequest("Cannot create an actor");
             }
-            return Ok("Success");
+            return Ok();
         }
 
         [HttpPut("{id}")]
@@ -72,7 +72,7 @@ namespace JourneyToTheWest.Controllers
             actorModel.Image = actor.Image;
             actorModel.Description = actor.Description;
             actorModel.Phone = actor.Phone;
-            return Ok("Updated successfully");
+            return Ok();
 
         }
 
@@ -86,7 +86,7 @@ namespace JourneyToTheWest.Controllers
             {
                 return BadRequest("Error: Remove Fail");
             }
-            return Ok("Remove Successfully");
+            return Ok();
         }
     }
 }

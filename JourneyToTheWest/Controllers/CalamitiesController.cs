@@ -68,7 +68,7 @@ namespace JourneyToTheWest.Controllers
             {
                 return BadRequest("Error: Remove Fail");
             }
-            return Ok("Remove Successfully");
+            return Ok();
         }
 
         [HttpPut("{id}")]
@@ -89,7 +89,8 @@ namespace JourneyToTheWest.Controllers
             calamityModel.NumberOfFilming = calamity.NumberOfFilming;
             calamityModel.RoleSpecification = calamity.RoleSpecification;
             calamityModel.Status = calamity.Status;
-            return Ok("Updated successfully");
+
+            return Ok();
         }
 
     }

@@ -29,7 +29,7 @@ namespace JourneyToTheWest.Controllers
             {
                 return NotFound("Equipment is not found");
             }
-            return Ok(equipment);
+            return Ok();
         }
 
         [HttpGet]
@@ -44,7 +44,7 @@ namespace JourneyToTheWest.Controllers
             {
                 return NotFound();
             }
-            return Ok(equipment);
+            return Ok();
         }
 
         [HttpPost]
@@ -59,7 +59,7 @@ namespace JourneyToTheWest.Controllers
             {
                 return BadRequest("Cannot create an equipment");
             }
-            return Ok("Success");
+            return Ok();
         }
 
         [HttpDelete("{id}")]
@@ -70,7 +70,7 @@ namespace JourneyToTheWest.Controllers
             {
                 return BadRequest("Error: Remove Fail");
             }
-            return Ok("Remove Successfully");
+            return Ok();
         }
 
         [HttpPut("{id}")]
@@ -86,7 +86,7 @@ namespace JourneyToTheWest.Controllers
             equipmentModel.Description = equipment.Description;
             equipmentModel.Quantity = equipment.Quantity;
             equipmentModel.IsActive = true;
-            return Ok("Updated Successfully");
+            return Ok();
         }
     }
 }
