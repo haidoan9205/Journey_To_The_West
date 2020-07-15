@@ -71,7 +71,7 @@ namespace JourneyToTheWest.Controllers
             return Ok("Remove Successfully");
         }
 
-        [HttpPost("{id}")]
+        [HttpPut("{id}")]
         public IActionResult UpdateCalamity([FromBody] Calamity calamity)
         {
             //var check = 

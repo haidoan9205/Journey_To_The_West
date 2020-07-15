@@ -73,7 +73,7 @@ namespace JourneyToTheWest.Controllers
             return Ok("Remove Successfully");
         }
 
-        [HttpPost("{id}")]
+        [HttpPut("{id}")]
         public IActionResult UpdateEquipment([FromBody] Equipment equipment)
         {
             Equipment equipmentModel = _equipmentLogic.GetEquipmentById(equipment.EquipmentId);

@@ -23,7 +23,7 @@ namespace BLL.BusinessLogic
             {
                 Actor actorModel = new Actor()
                 {
-                    ActorId = actor.ActorId,
+                 //   ActorId = actor.ActorId,
                     ActorName = actor.ActorName,
                     Image = actor.Image,
                     Description = actor.Description,

@@ -60,7 +60,7 @@ namespace JourneyToTheWest.Controllers
             return Ok("Success");
         }
 
-        [HttpPost]
+        [HttpPut("{id}")]
         public IActionResult UpdateActor([FromBody] Actor actor)
         {
             Actor actorModel = _actorLogic.GetActorById(actor.ActorId);

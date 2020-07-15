@@ -8,7 +8,6 @@ namespace DAL.Repositories
     public interface IRepositoryBase<T> where T : class
     {
         IQueryable<T> GetAll();
-
         T FindById(int id);
 
         void Insert(T entity);
