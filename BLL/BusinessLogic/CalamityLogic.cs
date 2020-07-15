@@ -58,7 +58,8 @@ namespace BLL.BusinessLogic
 
         public IQueryable<Calamity> GetAllCalamities()
         {
-            IQueryable<Calamity> calamities = _unitOfWork.GetRepository<Calamity>().GetAll();
+            IQueryable<Calamity> calamities = _unitOfWork.GetRepository<Calamity>().GetAll()
+                .Where(calamity => calamity.IsActive != false);
             return calamities;
         }
 
