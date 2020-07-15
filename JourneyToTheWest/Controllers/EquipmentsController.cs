@@ -29,7 +29,7 @@ namespace JourneyToTheWest.Controllers
             {
                 return NotFound("Equipment is not found");
             }
-            return Ok();
+            return Ok(equipment);
         }
 
         [HttpGet]
@@ -44,7 +44,7 @@ namespace JourneyToTheWest.Controllers
             {
                 return NotFound();
             }
-            return Ok();
+            return Ok(equipment);
         }
 
         [HttpPost]

@@ -27,7 +27,7 @@ namespace JourneyToTheWest.Controllers
             {
                 return NotFound("Actor is not found");
             }
-            return Ok();
+            return Ok(actor);
         }
 
         [HttpGet]
@@ -42,7 +42,7 @@ namespace JourneyToTheWest.Controllers
             {
                 return NotFound();
             }
-            return Ok();
+            return Ok(actor);
         }
 
         [HttpPost]
