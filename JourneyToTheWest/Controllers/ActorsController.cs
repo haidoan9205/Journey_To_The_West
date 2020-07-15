@@ -81,12 +81,13 @@ namespace JourneyToTheWest.Controllers
         [HttpDelete("{id}")]
         public IActionResult DeleteActor(int id)
         {
+            Actor actor = _actorLogic.GetActorById(id);
             var check = _actorLogic.DeleteActor(id);
             if (!check)
             {
                 return BadRequest("Error: Remove Fail");
             }
-            return Ok(id);
+            return Ok(actor);
         }
     }
 }
