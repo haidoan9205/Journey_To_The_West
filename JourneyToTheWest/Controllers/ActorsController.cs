@@ -60,19 +60,16 @@ namespace JourneyToTheWest.Controllers
             return Ok();
         }
 
-        [HttpPut("{id}")]
-        public IActionResult UpdateActor([FromBody] Actor actor)
+        [HttpPut]
+        public IActionResult UpdateActor(Actor actor)
         {
-            Actor actorModel = _actorLogic.GetActorById(actor.ActorId);
-            if (actorModel != null)
+            
+            if (actor == null)
             {
-                return NoContent();
+                return BadRequest();
             }
-            actorModel.ActorName = actor.ActorName;
-            actorModel.Image = actor.Image;
-            actorModel.Description = actor.Description;
-            actorModel.Phone = actor.Phone;
-            return Ok();
+            bool check = _actorLogic.UpdateActor(actor);
+            return Ok(actor);
 
         }
 

@@ -15,6 +15,8 @@ namespace JourneyToTheWest.Controllers
     [ApiController]
     public class EquipmentsController : ControllerBase
     {
+        private readonly Journey_To_The_WestContext _context = new Journey_To_The_WestContext();
+
         private readonly IEquipmentLogic _equipmentLogic;
         public EquipmentsController(IEquipmentLogic equipmentLogic)
         {
@@ -73,20 +75,15 @@ namespace JourneyToTheWest.Controllers
             return Ok(id);
         }
 
-        [HttpPut("{id}")]
+        [HttpPut]
         public IActionResult UpdateEquipment([FromBody] Equipment equipment)
         {
-            Equipment equipmentModel = _equipmentLogic.GetEquipmentById(equipment.EquipmentId);
-            if(equipment == null)
+            if (equipment == null)
             {
-                return NoContent();
+                return BadRequest();
             }
-            equipmentModel.EquipmentId = equipment.EquipmentId;
-            equipmentModel.EquipmentName = equipment.EquipmentName;
-            equipmentModel.Description = equipment.Description;
-            equipmentModel.Quantity = equipment.Quantity;
-            equipmentModel.IsActive = true;
-            return Ok();
+            bool check = _equipmentLogic.UpdateEquipment(equipment);
+            return Ok(equipment);
         }
     }
 }

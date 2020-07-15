@@ -71,26 +71,15 @@ namespace JourneyToTheWest.Controllers
             return Ok(id);
         }
 
-        [HttpPut("{id}")]
+        [HttpPut]
         public IActionResult UpdateCalamity([FromBody] Calamity calamity)
         {
-            //var check = 
-            Calamity calamityModel = _calamityLogic.GetCalamityById(calamity.CalamityId); 
-            if(calamityModel != null)
+            if (calamity == null)
             {
-                return NoContent();
+                return BadRequest();
             }
-            calamityModel.CalamityId = calamity.CalamityId;
-            calamityModel.CalamityName = calamity.CalamityName;
-            calamityModel.Description = calamity.Description;
-            calamityModel.Location = calamity.Location;
-            calamityModel.StartTime = calamity.StartTime;
-            calamityModel.EndTime = calamity.EndTime;
-            calamityModel.NumberOfFilming = calamity.NumberOfFilming;
-            calamityModel.RoleSpecification = calamity.RoleSpecification;
-            calamityModel.Status = calamity.Status;
-
-            return Ok();
+            bool check = _calamityLogic.UpdateCalamity(calamity);
+            return Ok(calamity);
         }
 
     }
