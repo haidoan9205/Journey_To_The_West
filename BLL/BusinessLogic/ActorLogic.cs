@@ -28,6 +28,7 @@ namespace BLL.BusinessLogic
                     Image = actor.Image,
                     Description = actor.Description,
                     Phone = actor.Phone,
+                    Email = actor.Email,
                     IsActive = true,
                 };
                 _unitOfWork.GetRepository<Actor>().Insert(actorModel);

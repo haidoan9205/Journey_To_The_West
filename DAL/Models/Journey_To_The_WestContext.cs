@@ -45,6 +45,10 @@ namespace DAL.Models
 
                 entity.Property(e => e.Description).HasColumnName("description");
 
+                entity.Property(e => e.Email)
+                    .HasColumnName("email")
+                    .HasMaxLength(50);
+
                 entity.Property(e => e.Image)
                     .HasColumnName("image")
                     .IsUnicode(false);
@@ -59,11 +63,16 @@ namespace DAL.Models
 
             modelBuilder.Entity<ActorList>(entity =>
             {
-                entity.HasKey(e => new { e.ActorId, e.CalamityId });
+                entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.ActorId).HasColumnName("actorId");
 
                 entity.Property(e => e.CalamityId).HasColumnName("calamityId");
+
+                entity.Property(e => e.Character)
+                    .HasColumnName("character")
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.IsActive).HasColumnName("isActive");
 
