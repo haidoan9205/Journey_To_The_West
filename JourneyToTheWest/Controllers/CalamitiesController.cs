@@ -61,14 +61,14 @@ namespace JourneyToTheWest.Controllers
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteCalamity(Calamity dto)
+        public IActionResult DeleteCalamity(int id)
         {
-            var check = _calamityLogic.DeleteCalamity(dto.CalamityId);
+            var check = _calamityLogic.DeleteCalamity(id);
             if (!check)
             {
                 return BadRequest("Error: Remove Fail");
             }
-            return Ok(dto);
+            return Ok(id);
         }
 
         [HttpPut("{id}")]
