@@ -67,12 +67,13 @@ namespace JourneyToTheWest.Controllers
         [HttpDelete("{id}")]
         public IActionResult DeleteEquipment(int id)
         {
+            Equipment equipment = _equipmentLogic.GetEquipmentById(id);
             var check = _equipmentLogic.DeleteEquipment(id);
             if (!check)
             {
                 return BadRequest("Error: Remove Fail");
             }
-            return Ok(id);
+            return Ok(equipment);
         }
 
         [HttpPut]
