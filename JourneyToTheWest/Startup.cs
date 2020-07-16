@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using BLL.BusinessLogic;
 using BLL.Interfaces;
 using DAL.Models;
+using DAL.Repositories;
 using DAL.UnitOfWorks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -37,7 +38,7 @@ namespace JourneyToTheWest
             services.AddScoped<IActorLogic, ActorLogic>();
             services.AddScoped<ICalamityLogic, CalamityLogic>();
             services.AddScoped<IEquipmentLogic, EquipmentLogic>();
-
+            services.AddScoped<IAuthRepository, AuthRepository>();
             services.AddSwaggerGen();
         }
 
