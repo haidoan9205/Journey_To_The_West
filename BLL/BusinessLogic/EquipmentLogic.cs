@@ -56,7 +56,7 @@ namespace BLL.BusinessLogic
         public IQueryable<Equipment> GetAllEquipments()
         {
             IQueryable<Equipment> equipmentList = _unitOfWork.GetRepository<Equipment>().GetAll()
-                .Where(equipment => equipment.IsActive != false);
+                .Where(equipment => equipment.IsActive == true);
             return equipmentList;
         }
 

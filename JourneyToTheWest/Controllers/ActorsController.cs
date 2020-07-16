@@ -57,7 +57,7 @@ namespace JourneyToTheWest.Controllers
             {
                 return BadRequest("Cannot create an actor");
             }
-            return Ok();
+            return Ok(actor);
         }
 
         [HttpPut]

@@ -64,7 +64,7 @@ namespace BLL.BusinessLogic
         public IQueryable<Actor> GetAllActors()
         {
             IQueryable<Actor> actorList = _unitOfWork.GetRepository<Actor>().GetAll().Where(actor =>
-                                actor.IsActive != false);
+                                actor.IsActive == true);
             return actorList;
         }
 
