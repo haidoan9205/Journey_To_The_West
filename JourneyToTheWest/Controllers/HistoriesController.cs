@@ -24,6 +24,8 @@ namespace JourneyToTheWest.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<History>>> GetHistory()
         {
+            
+
             return await _context.History.ToListAsync();
         }
 

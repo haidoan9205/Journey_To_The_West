@@ -93,6 +93,8 @@ namespace DAL.Models
             {
                 entity.Property(e => e.CalamityId).HasColumnName("calamityId");
 
+                entity.Property(e => e.ActorId).HasColumnName("actorId");
+
                 entity.Property(e => e.CalamityName)
                     .HasColumnName("calamityName")
                     .HasMaxLength(100);
@@ -102,6 +104,8 @@ namespace DAL.Models
                 entity.Property(e => e.EndTime)
                     .HasColumnName("endTime")
                     .HasColumnType("datetime");
+
+                entity.Property(e => e.EquipmentId).HasColumnName("equipmentId");
 
                 entity.Property(e => e.IsActive).HasColumnName("isActive");
 
@@ -120,6 +124,16 @@ namespace DAL.Models
                     .HasColumnType("datetime");
 
                 entity.Property(e => e.Status).HasColumnName("status");
+
+                entity.HasOne(d => d.Actor)
+                    .WithMany(p => p.Calamity)
+                    .HasForeignKey(d => d.ActorId)
+                    .HasConstraintName("FK__Calamity__actorI__07C12930");
+
+                entity.HasOne(d => d.Equipment)
+                    .WithMany(p => p.Calamity)
+                    .HasForeignKey(d => d.EquipmentId)
+                    .HasConstraintName("FK__Calamity__equipm__08B54D69");
 
                 entity.HasOne(d => d.StatusNavigation)
                     .WithMany(p => p.Calamity)
@@ -188,7 +202,6 @@ namespace DAL.Models
                     .HasDefaultValueSql("(getdate())");
 
                 entity.Property(e => e.UserId)
-                    .IsRequired()
                     .HasColumnName("userId")
                     .HasMaxLength(30)
                     .IsUnicode(false);
@@ -211,7 +224,6 @@ namespace DAL.Models
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.History)
                     .HasForeignKey(d => d.UserId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_History_User");
             });
 

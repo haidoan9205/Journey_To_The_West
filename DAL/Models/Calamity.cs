@@ -22,7 +22,11 @@ namespace DAL.Models
         public string RoleSpecification { get; set; }
         public int? Status { get; set; }
         public bool? IsActive { get; set; }
+        public int? ActorId { get; set; }
+        public int? EquipmentId { get; set; }
 
+        public virtual Actor Actor { get; set; }
+        public virtual Equipment Equipment { get; set; }
         public virtual StatusDetailed StatusNavigation { get; set; }
         public virtual ICollection<ActorList> ActorList { get; set; }
         public virtual ICollection<EquipmentList> EquipmentList { get; set; }

@@ -8,6 +8,7 @@ namespace DAL.Models
         public Actor()
         {
             ActorList = new HashSet<ActorList>();
+            Calamity = new HashSet<Calamity>();
             History = new HashSet<History>();
             User = new HashSet<User>();
         }
@@ -21,6 +22,7 @@ namespace DAL.Models
         public bool? IsActive { get; set; }
 
         public virtual ICollection<ActorList> ActorList { get; set; }
+        public virtual ICollection<Calamity> Calamity { get; set; }
         public virtual ICollection<History> History { get; set; }
         public virtual ICollection<User> User { get; set; }
     }
