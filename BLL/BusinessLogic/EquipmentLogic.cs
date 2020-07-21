@@ -23,7 +23,7 @@ namespace BLL.BusinessLogic
             {
                 Equipment equipmentModel = new Equipment()
                 {
-                    EquipmentId = equipment.EquipmentId,
+                    //EquipmentId = equipment.EquipmentId,
                     EquipmentName = equipment.EquipmentName,
                     Description = equipment.Description,
                     Quantity = equipment.Quantity,
