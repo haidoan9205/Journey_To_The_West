@@ -23,7 +23,7 @@ namespace BLL.BusinessLogic
             {
                 Calamity calamityModel = new Calamity()
                 {
-                    CalamityId = calamity.CalamityId,
+                    //CalamityId = calamity.CalamityId,
                     CalamityName = calamity.CalamityName,
                     Description = calamity.Description,
                     Location = calamity.Location,
