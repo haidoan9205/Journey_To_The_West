@@ -46,7 +46,7 @@ namespace JourneyToTheWest.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateCalamity(CalamityViewDTO calamity)
+        public IActionResult CreateCalamity(Calamity calamity)
         {
             if (calamity == null)
             {
