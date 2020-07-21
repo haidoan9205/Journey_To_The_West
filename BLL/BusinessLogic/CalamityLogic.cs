@@ -16,7 +16,7 @@ namespace BLL.BusinessLogic
         {
             _unitOfWork = unitOfWork;
         }
-        public bool CreateCalamity(Calamity calamity)
+        public bool CreateCalamity(CalamityViewDTO calamity)
         {
             bool check = false;
             if(calamity != null)

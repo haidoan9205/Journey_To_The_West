@@ -15,6 +15,8 @@ namespace BLL.DTOs.CalamityDTOs
         public int NumberOfFilming { get; set; }
         public string RoleSpecification { get; set; }
         public int Status { get; set; }
-       
+        public bool IsActive { get; set; }
+
+
     }
 }

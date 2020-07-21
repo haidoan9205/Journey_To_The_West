@@ -12,7 +12,7 @@ namespace BLL.Interfaces
         public IQueryable<Calamity> GetAllCalamities();
         public Calamity GetCalamityById(int id);
         // public List<NewsViewModel> SearchNewsByTitle(String title, PagingModel pagingModel);
-        public bool CreateCalamity(Calamity calamity);
+        public bool CreateCalamity(CalamityViewDTO calamity);
         public bool UpdateCalamity(Calamity calamity);
         public bool DeleteCalamity(int id);
     }
