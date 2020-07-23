@@ -29,7 +29,7 @@ namespace DAL.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=tcp:jouney.database.windows.net,1433;Initial Catalog=Journey_To_The_West;Persist Security Info=False;User ID=admin1;Password=123@admin;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+                optionsBuilder.UseSqlServer("Server=tcp:tayduky-prm.database.windows.net,1433;Initial Catalog=jwwt;Persist Security Info=False;User ID=admin1;Password=123@admin;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             }
         }
 

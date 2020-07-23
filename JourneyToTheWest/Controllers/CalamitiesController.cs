@@ -7,6 +7,7 @@ using BLL.Interfaces;
 using DAL.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace JourneyToTheWest.Controllers
 {
@@ -14,10 +15,15 @@ namespace JourneyToTheWest.Controllers
     [ApiController]
     public class CalamitiesController : ControllerBase
     {
+        private readonly Journey_To_The_WestContext _context;
+
+  
+
         private readonly ICalamityLogic _calamityLogic;
-        public CalamitiesController(ICalamityLogic calamityLogic)
+        public CalamitiesController(ICalamityLogic calamityLogic, Journey_To_The_WestContext context)
         {
             _calamityLogic = calamityLogic;
+            _context = context;
         }
         [HttpGet("{id}")]
         public IActionResult GetCalamity(int id)
@@ -44,6 +50,8 @@ namespace JourneyToTheWest.Controllers
             }
             return Ok(calamity);
         }
+
+
 
         [HttpPost]
         public IActionResult CreateCalamity(CalamityViewDTO calamity)

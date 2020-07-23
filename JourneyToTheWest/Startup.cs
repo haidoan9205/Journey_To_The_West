@@ -33,7 +33,7 @@ namespace JourneyToTheWest
         {
             services.AddControllers();
 
-            services.AddDbContext<Journey_To_The_WestContext>(o => o.UseSqlServer("Server=tcp:jouney.database.windows.net,1433;Initial Catalog=Journey_To_The_West;Persist Security Info=False;User ID=admin1;Password=123@admin;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"));
+            services.AddDbContext<Journey_To_The_WestContext>(o => o.UseSqlServer("Server=tcp:tayduky-prm.database.windows.net,1433;Initial Catalog=jwwt;Persist Security Info=False;User ID=admin1;Password=123@admin;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"));
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IActorLogic, ActorLogic>();
             services.AddScoped<ICalamityLogic, CalamityLogic>();
