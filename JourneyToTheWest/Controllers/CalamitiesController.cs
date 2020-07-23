@@ -15,12 +15,12 @@ namespace JourneyToTheWest.Controllers
     [ApiController]
     public class CalamitiesController : ControllerBase
     {
-        private readonly Journey_To_The_WestContext _context;
+        private readonly jwwtContext _context;
 
   
 
         private readonly ICalamityLogic _calamityLogic;
-        public CalamitiesController(ICalamityLogic calamityLogic, Journey_To_The_WestContext context)
+        public CalamitiesController(ICalamityLogic calamityLogic, jwwtContext context)
         {
             _calamityLogic = calamityLogic;
             _context = context;

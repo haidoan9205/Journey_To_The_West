@@ -8,7 +8,6 @@ namespace DAL.Models
         public Equipment()
         {
             Calamity = new HashSet<Calamity>();
-            EquipmentList = new HashSet<EquipmentList>();
             History = new HashSet<History>();
         }
 
@@ -20,7 +19,6 @@ namespace DAL.Models
         public string Image { get; set; }
 
         public virtual ICollection<Calamity> Calamity { get; set; }
-        public virtual ICollection<EquipmentList> EquipmentList { get; set; }
         public virtual ICollection<History> History { get; set; }
     }
 }

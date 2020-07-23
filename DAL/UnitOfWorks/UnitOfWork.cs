@@ -8,10 +8,10 @@ namespace DAL.UnitOfWorks
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly Journey_To_The_WestContext _context;
+        private readonly jwwtContext _context;
         private readonly Dictionary<Type, object> repositories = new Dictionary<Type, object>();
 
-        public UnitOfWork(Journey_To_The_WestContext context)
+        public UnitOfWork(jwwtContext context)
         {
             _context = context;
         }

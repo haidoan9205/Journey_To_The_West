@@ -9,10 +9,10 @@ namespace DAL.Repositories
 {
     public class AuthRepository : IAuthRepository
     {
-        private readonly Journey_To_The_WestContext _context;
+        private readonly jwwtContext _context;
 
 
-        public AuthRepository(Journey_To_The_WestContext context)
+        public AuthRepository(jwwtContext context)
         {
             _context = context;
 

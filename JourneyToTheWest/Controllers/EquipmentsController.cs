@@ -15,7 +15,7 @@ namespace JourneyToTheWest.Controllers
     [ApiController]
     public class EquipmentsController : ControllerBase
     {
-        private readonly Journey_To_The_WestContext _context = new Journey_To_The_WestContext();
+        private readonly jwwtContext _context = new jwwtContext();
 
         private readonly IEquipmentLogic _equipmentLogic;
         public EquipmentsController(IEquipmentLogic equipmentLogic)

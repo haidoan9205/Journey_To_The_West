@@ -4,22 +4,20 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace DAL.Models
 {
-    public partial class Journey_To_The_WestContext : DbContext
+    public partial class jwwtContext : DbContext
     {
-        public Journey_To_The_WestContext()
+        public jwwtContext()
         {
         }
 
-        public Journey_To_The_WestContext(DbContextOptions<Journey_To_The_WestContext> options)
+        public jwwtContext(DbContextOptions<jwwtContext> options)
             : base(options)
         {
         }
 
         public virtual DbSet<Actor> Actor { get; set; }
-        public virtual DbSet<ActorList> ActorList { get; set; }
         public virtual DbSet<Calamity> Calamity { get; set; }
         public virtual DbSet<Equipment> Equipment { get; set; }
-        public virtual DbSet<EquipmentList> EquipmentList { get; set; }
         public virtual DbSet<History> History { get; set; }
         public virtual DbSet<StatusDetailed> StatusDetailed { get; set; }
         public virtual DbSet<User> User { get; set; }
@@ -61,34 +59,6 @@ namespace DAL.Models
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<ActorList>(entity =>
-            {
-                entity.Property(e => e.Id).HasColumnName("id");
-
-                entity.Property(e => e.ActorId).HasColumnName("actorId");
-
-                entity.Property(e => e.CalamityId).HasColumnName("calamityId");
-
-                entity.Property(e => e.Character)
-                    .HasColumnName("character")
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.IsActive).HasColumnName("isActive");
-
-                entity.HasOne(d => d.Actor)
-                    .WithMany(p => p.ActorList)
-                    .HasForeignKey(d => d.ActorId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_ActorList_Actor");
-
-                entity.HasOne(d => d.Calamity)
-                    .WithMany(p => p.ActorList)
-                    .HasForeignKey(d => d.CalamityId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_ActorList_Calamity");
-            });
-
             modelBuilder.Entity<Calamity>(entity =>
             {
                 entity.Property(e => e.CalamityId).HasColumnName("calamityId");
@@ -128,12 +98,12 @@ namespace DAL.Models
                 entity.HasOne(d => d.Actor)
                     .WithMany(p => p.Calamity)
                     .HasForeignKey(d => d.ActorId)
-                    .HasConstraintName("FK__Calamity__actorI__07C12930");
+                    .HasConstraintName("FK__Calamity__actorI__59FA5E80");
 
                 entity.HasOne(d => d.Equipment)
                     .WithMany(p => p.Calamity)
                     .HasForeignKey(d => d.EquipmentId)
-                    .HasConstraintName("FK__Calamity__equipm__08B54D69");
+                    .HasConstraintName("FK__Calamity__equipm__5AEE82B9");
 
                 entity.HasOne(d => d.StatusNavigation)
                     .WithMany(p => p.Calamity)
@@ -159,31 +129,6 @@ namespace DAL.Models
                 entity.Property(e => e.IsActive).HasColumnName("isActive");
 
                 entity.Property(e => e.Quantity).HasColumnName("quantity");
-            });
-
-            modelBuilder.Entity<EquipmentList>(entity =>
-            {
-                entity.HasKey(e => new { e.EquipmentId, e.CalamityId });
-
-                entity.Property(e => e.EquipmentId).HasColumnName("equipmentId");
-
-                entity.Property(e => e.CalamityId).HasColumnName("calamityId");
-
-                entity.Property(e => e.IsActive).HasColumnName("isActive");
-
-                entity.Property(e => e.Quantity).HasColumnName("quantity");
-
-                entity.HasOne(d => d.Calamity)
-                    .WithMany(p => p.EquipmentList)
-                    .HasForeignKey(d => d.CalamityId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_EquipmentList_Calamity");
-
-                entity.HasOne(d => d.Equipment)
-                    .WithMany(p => p.EquipmentList)
-                    .HasForeignKey(d => d.EquipmentId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_EquipmentList_Equipment");
             });
 
             modelBuilder.Entity<History>(entity =>

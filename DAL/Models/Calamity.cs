@@ -7,8 +7,6 @@ namespace DAL.Models
     {
         public Calamity()
         {
-            ActorList = new HashSet<ActorList>();
-            EquipmentList = new HashSet<EquipmentList>();
             History = new HashSet<History>();
         }
 
@@ -28,8 +26,6 @@ namespace DAL.Models
         public virtual Actor Actor { get; set; }
         public virtual Equipment Equipment { get; set; }
         public virtual StatusDetailed StatusNavigation { get; set; }
-        public virtual ICollection<ActorList> ActorList { get; set; }
-        public virtual ICollection<EquipmentList> EquipmentList { get; set; }
         public virtual ICollection<History> History { get; set; }
     }
 }

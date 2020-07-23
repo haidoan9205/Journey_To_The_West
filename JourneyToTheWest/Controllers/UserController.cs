@@ -15,11 +15,11 @@ namespace JourneyToTheWest.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly Journey_To_The_WestContext _context;
+        private readonly jwwtContext _context;
         private readonly IAuthRepository _repo;
         private readonly IConfiguration _config;
 
-        public UserController(IAuthRepository authRepo, IConfiguration config, Journey_To_The_WestContext context)
+        public UserController(IAuthRepository authRepo, IConfiguration config, jwwtContext context)
         {
             //_userLogic = userLogic;
             _context = context;

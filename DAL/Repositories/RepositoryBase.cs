@@ -11,7 +11,7 @@ namespace DAL.Repositories
     {
         private readonly DbSet<T> _dbSet;
 
-        public RepositoryBase(Journey_To_The_WestContext dataContext)
+        public RepositoryBase(jwwtContext dataContext)
         {
             Context = dataContext;
             _dbSet = Context.Set<T>();

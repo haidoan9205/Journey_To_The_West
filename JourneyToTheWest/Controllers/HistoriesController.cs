@@ -13,9 +13,9 @@ namespace JourneyToTheWest.Controllers
     [ApiController]
     public class HistoriesController : ControllerBase
     {
-        private readonly Journey_To_The_WestContext _context;
+        private readonly jwwtContext _context;
 
-        public HistoriesController(Journey_To_The_WestContext context)
+        public HistoriesController(jwwtContext context)
         {
             _context = context;
         }
